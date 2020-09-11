@@ -27,20 +27,19 @@ class CommentService
     public function create($data){
         $this->commentRepository->create($data->all());
     }
-    public function showind($id){
-       return $this->commentRepository->showind($id);
+    public function find($id){
+       return $this->commentRepository->find($id);
     }
     public function edit($id){
         return $this->commentRepository->edit($id);
     }
-    public function showall(){
-        return $this->commentRepository->showall();
+    public function show(){
+        return $this->commentRepository->show();
     }
     public function update($request,$id){
         $this->commentRepository->update($request,$id);
     }
     public function delete($id){
-
         $this->commentRepository->delete($id);
     }
 }

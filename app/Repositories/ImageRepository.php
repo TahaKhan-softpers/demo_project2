@@ -35,11 +35,11 @@ class ImageRepository
    }
 
    // show individual image based on id
-   public function showind($id){
+   public function find($id){
        return  $this->image->where('id',$id)->get();
    }
    // show all image.
-   public function showall(){
+   public function show(){
         return $this->image->all();
    }
    //to delete image
@@ -52,7 +52,7 @@ class ImageRepository
 
        $this->image->where('post_id',$id)->update($request);
    }
-   public function postimage($id){
+   public function postImage($id){
         //this is post id
         return $this->image->where('post_id',$id)->first();
    }

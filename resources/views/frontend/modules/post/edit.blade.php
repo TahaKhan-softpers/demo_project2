@@ -5,7 +5,7 @@
             <div class="col-10">
                 <div class="jumbotron rounded-0">
                     <h1>EDIT POST PAGE</h1>
-                    <form action="{{url('post/update/'.$edit->id)}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{url('post/update/'.$edit->id)}}" method="POST" enctype="multipart/form-data" >
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="title">Title</label>
@@ -25,8 +25,13 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlFile1" class="@error('image_upload') is-invalid @enderror">Image file input</label>
-                            <label><img class="col-3 " src="{{asset('assets/img/'.$edit->image->name)}}"></label>
-                            <input type="file" class="form-control-file " id="exampleFormControlFile1 " name="image_upload" >
+
+                                <p><input type="file" class="form-control-file" id="imageInp" name="image_upload"/></p>
+                                <p><img id="imageDisplay" class="col-3 form-control-file" src="@if($edit->image->name) asset('assets/img/'.$edit->image->name) @else # @endif" alt="your image" /></p>
+
+
+{{--                            <label><img class="col-3 " src="{{asset('assets/img/'.$edit->image->name)}}"></label>--}}
+{{--                            <input type="file" class="form-control-file " id="exampleFormControlFile1 " name="image_upload" >--}}
                             @error('image_upload')
                             <div class="alert alert-danger">{{$message}}</div>
                             @enderror

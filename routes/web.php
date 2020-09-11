@@ -22,26 +22,26 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //MAIN VIEW FOR PAGE
-Route::get('/mainview',function (){
+Route::get('/mainview', function () {
     return view('frontend/modules/index');
 });
 //Routes that are used for user
 
-Route::resource('/user','UserController')->middleware('auth');
+Route::resource('/user', 'UserController')->middleware('auth');
 //Routes that are used for comment
-Route::resource('/comment','CommentController')->middleware('auth');
+Route::resource('/comment', 'CommentController')->middleware('auth');
 //Routes that area used for image
-Route::resource('/image','ImageController')->middleware('auth');
+Route::resource('/image', 'ImageController')->middleware('auth');
 //this is post routes
 Route::prefix('post')->middleware('auth')->group(function () {
 
     Route::get('/', 'PostController@index');
     Route::get('/show/{id}', 'PostController@show');
-    Route::get('/create/','PostController@create');
-    Route::post('/store/','PostController@store');
-    Route::get('/edit/{id}','PostController@edit');
-    Route::post('/update/{id}','PostController@update');
-    Route::get('/delete/{id}','PostController@destroy');
+    Route::get('/create/', 'PostController@create');
+    Route::post('/store/', 'PostController@store');
+    Route::get('/edit/{id}', 'PostController@edit');
+    Route::post('/update/{id}', 'PostController@update');
+    Route::get('/delete/{id}', 'PostController@destroy');
 
 });
 

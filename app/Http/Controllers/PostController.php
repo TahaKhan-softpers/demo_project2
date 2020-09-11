@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use App\Services\PostService;
+use Illuminate\Support\Facades\DB;
+use mysql_xdevapi\Exception;
 
 
 class PostController extends Controller
@@ -26,7 +28,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $post = $this->postService->showall();
+        $post = $this->postService->show();
 
         return view('frontend.modules.post.post', compact('post'));
     }
@@ -56,8 +58,15 @@ class PostController extends Controller
         ]);
 
         //$request->image="image";
-        $this->postService->create($request);
-        return redirect('/post')->with('message', 'post uploaded!');
+        DB::beginTransaction();
+        try {
+            $this->postService->create($request);
+            DB::commit();
+            return redirect('/post')->with('message', 'post uploaded!');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return redirect('/post')->with('message', 'this is error  <br> ' . $e . '/');
+        }
 
     }
 
@@ -69,8 +78,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-
-        $post = $this->postService->showind($id);
+        $post = $this->postService->find($id);
         return view('frontend.modules.post.post_detail', compact('post'));
     }
 
@@ -101,9 +109,16 @@ class PostController extends Controller
             'description' => 'required',
             'image_upload' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-        $this->postService->update($request, $id);
+        DB::Begintransaction();
+        try {
+            $this->postService->update($request, $id);
+            DB::commit();
+            return redirect('post/show/' . $id)->with('message', 'Post Edited!');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return redirect('/post/show/' . $id)->with('message', 'Post Error' . $e . '<br>');
+        }
 
-        return redirect('post/show/' . $id)->with('message', 'Post Edited!');
     }
 
     /**
