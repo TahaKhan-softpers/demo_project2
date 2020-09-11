@@ -14,31 +14,26 @@
                                     <th scope="col">User</th>
                                     <th scope="col">User Email</th>
                                     <th scope="col">Post</th>
-                                    <th scope="col">Comment</th>
+
                                     <th scope="col">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
 
                                 @foreach($user as $users)
-                                    @if(isset($users->posts))
-                                        @foreach($users->posts as $post)
-                                            @foreach($post->comments as $comment)
                                             <tr>
                                                 <td>{{$users->name}}</td>
                                                 <td>{{$users->email}}</td>
-                                                <td>{{$post->title}}</td>
+                                                <td>{{count($users->posts)}}</td>
 
-                                                <td>{{$comment->description}}</td>
+
 
 
                                                 <td><a role="button" class="btn btn-primary"
                                                        href="{{url('post/show/'.$users->id)}}">Show Post</a>
                                                     <a role="button" class="btn btn-secondary" href="#">Delete</a></td>
                                             </tr>
-                                            @endforeach
-                                        @endforeach
-                                    @endif
+
                                 @endforeach
 
                                 </tbody>
