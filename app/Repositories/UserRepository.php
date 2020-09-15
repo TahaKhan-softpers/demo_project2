@@ -27,7 +27,7 @@ class UserRepository
     // new user store
     public function create($result)
     {
-        $this->user->create($result);
+        return $this->user->create($result);
     }
 
     //show only one user record for edit
@@ -39,7 +39,7 @@ class UserRepository
     // show individual user based on id
     public function find($id)
     {
-        return $this->user->where('id', $id)->get();
+        return $this->user->where('id', $id)->first();
     }
 
     // show all users.

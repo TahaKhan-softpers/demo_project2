@@ -28,7 +28,7 @@ class UserService
 
     public function create($data)
     {
-        $this->userRepository->create($data);
+        return $this->userRepository->create($data);
     }
 
     public function find($id)

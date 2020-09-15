@@ -1,42 +1,29 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ApiControllers;
 
-use App\Http\Resources\User as UserResource;
-use App\Services\UserService;
-use App\User;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\CommentResource;
+use App\Services\CommentService;
 use Illuminate\Http\Request;
 
-
-class UserController extends Controller
+class CommentController extends Controller
 {
-    /**
-     * @Var userService
-     *
-     *
-     */
-    protected $userService;
-
-    /**
-     *  Post Service Constructor
-     * @param UserService $userService
-     *
-     */
-    public function __construct(UserService $userService)
-    {
-        $this->userService = $userService;
-    }
+    protected $commentService;
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(CommentService $commentService)
+    {
+        $this->commentService = $commentService;
+    }
+
     public function index()
     {
-        $user = $this->userService->show();
-        return view('frontend.modules.user.user', compact('user'));
-
+        return CommentResource::collection($this->commentService->index());
     }
 
     /**
@@ -46,7 +33,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //make it to return form
+        //
     }
 
     /**
@@ -57,7 +44,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $this->userService->create($request->all());
+        //
     }
 
     /**
@@ -68,7 +55,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $this->userService->find($id);
+        return new CommentResource($this->commentService->find($id));
     }
 
     /**
@@ -79,7 +66,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $this->userService->edit($id);
+        return new CommentResource($this->commentService->edit($id));
     }
 
     /**
@@ -91,7 +78,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->userService->update($request->all(), $id);
+        //
     }
 
     /**
@@ -102,8 +89,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $this->userService->delete($id);
+        return new CommentResource($this->commentService->delete($id));
     }
-
-
 }

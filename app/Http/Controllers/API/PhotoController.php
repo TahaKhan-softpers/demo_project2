@@ -1,35 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Services\RAWSERVICE;
-
-class PostController2 extends Controller
+class PhotoController extends Controller
 {
-    protected $postService;
-
-    public function __construct(RAWSERVICE $postService){
-        $this->postService=$postService;
-    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-       $data = $this->postService->showall();
-        return view('frontend.module.index',compact('data'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
     {
         //
     }
@@ -52,17 +35,6 @@ class PostController2 extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
     {
         //
     }

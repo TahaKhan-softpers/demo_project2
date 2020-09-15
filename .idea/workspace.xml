@@ -28,7 +28,24 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ba19b14-3f66-46db-a1d5-1afacf1308a8" name="Default Changelist" comment="" />
+    <list default="true" id="8ba19b14-3f66-46db-a1d5-1afacf1308a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/blog2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/modules/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/modules/test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,6 +169,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gzbNPteqea5RPIupENUDYyfPkZ" />
@@ -172,16 +190,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\LARAVEL7\blog2\app\Models" />
+      <recent name="C:\xampp\htdocs\LARAVEL7\blog2\app\Model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\LARAVEL7\blog2\app\Services" />
       <recent name="C:\xampp\htdocs\LARAVEL7\blog2\resources\views\frontend\modules\comment" />
       <recent name="C:\xampp\htdocs\LARAVEL7\blog2\resources\views\frontend\modules\image" />
       <recent name="C:\xampp\htdocs\LARAVEL7\blog2\resources\views\frontend\modules\post" />
       <recent name="C:\xampp\htdocs\LARAVEL7\blog2\resources\views\frontend\modules\user" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\LARAVEL7\blog2\app\Models" />
-      <recent name="C:\xampp\htdocs\LARAVEL7\blog2\app\Model" />
     </key>
   </component>
   <component name="RunManager">
@@ -212,6 +230,14 @@
       <workItem from="1599800986693" duration="1989000" />
       <workItem from="1599803004759" duration="618000" />
       <workItem from="1599803650410" duration="12793000" />
+      <workItem from="1599921079730" duration="36000" />
+      <workItem from="1599923043939" duration="2832000" />
+      <workItem from="1599974329565" duration="1805000" />
+      <workItem from="1599989697731" duration="4119000" />
+      <workItem from="1600007254399" duration="11979000" />
+      <workItem from="1600061246625" duration="1551000" />
+      <workItem from="1600064912039" duration="22664000" />
+      <workItem from="1600140470726" duration="21433000" />
     </task>
     <servers />
   </component>
@@ -243,6 +269,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="439" y="184" key="#Notifications" timestamp="1600063357100">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="439" y="184" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1600063357100" />
     <state x="275" y="5" key="#Plugins" timestamp="1599803811059">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -263,10 +293,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1599554253202" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599557755185">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600153901876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599557755185" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600153901876" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1599140543946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -299,22 +329,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599805191071" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1599818778284">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1600163602975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1599818778284" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1600163602975" />
     <state x="324" y="90" width="700" height="530" key="recent.locations.popup" timestamp="1599805720775">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="324" y="90" width="700" height="530" key="recent.locations.popup/0.0.1366.728@0.0.1366.728" timestamp="1599805720775" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1599816593455">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1600149051427">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1599816593455" />
-    <state x="281" y="135" width="672" height="678" key="search.everywhere.popup" timestamp="1599819333662">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600149051427" />
+    <state x="281" y="135" width="672" height="678" key="search.everywhere.popup" timestamp="1600153139148">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="135" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599819333662" />
+    <state x="281" y="135" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600153139148" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

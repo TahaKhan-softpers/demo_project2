@@ -21,17 +21,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//MAIN VIEW FOR PAGE
-Route::get('/mainview', function () {
-    return view('frontend/modules/index');
-});
-//Routes that are used for user
+Route::prefix('/')->middleware('auth')->group(function () {
 
-Route::resource('/user', 'UserController')->middleware('auth');
-//Routes that are used for comment
-Route::resource('/comment', 'CommentController')->middleware('auth');
-//Routes that area used for image
-Route::resource('/image', 'ImageController')->middleware('auth');
+    //MAIN VIEW FOR PAGE
+    Route::get('/mainview', function () {
+        return view('frontend/modules/index');
+    })->withoutMiddleware('auth');
+    //Routes that are used for user
+    Route::resource('/user', 'UserController');
+    //Routes that are used for comment
+    Route::resource('/comment', 'CommentController');
+    //Routes that area used for image
+    Route::resource('/image', 'ImageController');
+
+});
+
 //this is post routes
 Route::prefix('post')->middleware('auth')->group(function () {
 
