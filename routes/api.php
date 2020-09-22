@@ -26,9 +26,9 @@ Route::prefix('/')->middleware('auth:sanctum')->group(function () {
     Route::get('/post/{id}', 'ApiControllers\PostController@show');
     Route::get('/logout', 'ApiControllers\LoginController@logout');
 
-
 });
 Route::post('/login', 'ApiControllers\LoginController@login');
+
 
 
 

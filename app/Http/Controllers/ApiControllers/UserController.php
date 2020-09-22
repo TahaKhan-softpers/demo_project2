@@ -52,6 +52,7 @@ class UserController extends Controller
         $check = $this->userService->create($request->all());
         //this logic was just for testing otherwise it is better to create user and store in auth already
         //return redirect('api/login')->with('message','Login to Continue');
+        //redirect is not necessary in apis you just need to return response.
         if (isset($check)) {
             return response(['User' => 'Successfull',],200);
             //->setStatusCode(Response::HTTP_OK, Response::$statusTexts[Response::HTTP_OK]);

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 
 class PostController extends Controller
@@ -27,6 +28,8 @@ class PostController extends Controller
 
     public function index()
     {
+        Log::info('here');
+        Log::info(Auth::id());
         //auth('api')->user());
        // return dd(Auth::user());
 //        if (!Auth::user()->tokenCan('show:all')) {

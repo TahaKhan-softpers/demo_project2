@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}>
-
-<head >
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
 
     <meta name=" viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>this is main page</title>
-<!-- CSRF Token -->
-<meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>this is main page</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<link rel="stylesheet" type="text/css" href="{{asset('assets/bootstrap-4.5.2-dist/css/bootstrap.min.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('assets/fontawesome-free-5.14.0-web/css/all.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/bootstrap-4.5.2-dist/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/fontawesome-free-5.14.0-web/css/all.css')}}">
 
 </head>
 <body>

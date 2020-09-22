@@ -25,7 +25,7 @@ class CommentService
          $this->commentRepository=$commentRepository;
     }
     public function create($data){
-        $this->commentRepository->create($data->all());
+        return $this->commentRepository->create($data->all());
     }
     public function find($id){
        return $this->commentRepository->find($id);

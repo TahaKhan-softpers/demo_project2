@@ -29,7 +29,7 @@ class CommentRepository
     public function create($result)
     {
 
-        $this->comment->create($result);
+       return $this->comment->create($result);
     }
 
     //show only one comment for edit

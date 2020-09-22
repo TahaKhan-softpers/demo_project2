@@ -3,23 +3,31 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\CommentCreate;
+use App\Http\Requests\CommentUpdate;
+use App\Notifications\Commented;
 use App\Services\CommentService;
+
+use App\Services\PostService;
+use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
 class CommentController extends Controller
 {
-    protected $commentService;
+    protected $commentService, $postService, $userService;
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(CommentService $commentService)
+    public function __construct(CommentService $commentService, PostService $postService, UserService $userService)
     {
         $this->commentService = $commentService;
+        $this->postService = $postService;
+        $this->userService = $userService;
     }
 
     public function index()
@@ -44,18 +52,16 @@ class CommentController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CommentCreate $request)
     {
-        $request->validate([
-            'post_id' => 'required',
-            'user_id' => 'required',
-            'description' => 'required|max:255',
-        ]);
-
+        $request->validated();
         DB::beginTransaction();
         try {
-            $this->commentService->create($request);
+            $comment = $this->commentService->create($request);
             DB::commit();
+            $post = $this->postService->find($request->post_id);
+            $owner = $post->user;
+            $owner->notify(new Commented($comment));
             return redirect('/post/show/' . $request->post_id);
         } catch (\Exception $e) {
             DB::rollBack();
@@ -93,14 +99,15 @@ class CommentController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CommentUpdate $request, $id)
     {
-        $request->validate([
-            'post_id' => 'required',
-            'user_id' => 'required',
-            'description' => 'required|max:255',
-        ]);
+//        $request->validate([
+//            'post_id' => 'required',
+//            'user_id' => 'required',
+//            'description' => 'required|max:255',
+//        ]);
 
+        $request->validated();
         DB::transaction();
         try {
             $this->commentService->create($request);

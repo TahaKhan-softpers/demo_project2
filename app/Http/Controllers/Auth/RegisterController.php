@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Notifications\InvoicePaid;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -71,11 +72,14 @@ class RegisterController extends Controller
     {
         $data['role']=Str::upper($data['role']);
         $data['name']=Str::upper($data['name']);
-        return User::create([
+        $user =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'role'  => $data['role'],
         ]);
+
+        $user->notify(new InvoicePaid());
+        return $user;
     }
 }

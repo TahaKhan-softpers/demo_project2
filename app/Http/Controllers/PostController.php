@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\PostCreate;
+use App\Http\Requests\PostUpdate;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use App\Services\PostService;
@@ -49,15 +51,16 @@ class PostController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostCreate $request)
     {
-        $request->validate([
-            'title' => 'required|max:255',
-            'description' => 'required|',
-            'image_upload' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+//        $request->validate([
+//            'title' => 'required|max:255',
+//            'description' => 'required|string',
+//            'image_upload' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+//        ]);
 
         //$request->image="image";
+        $request->validated();
         DB::beginTransaction();
         try {
             $this->postService->create($request);
@@ -102,13 +105,14 @@ class PostController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostUpdate $request, $id)
     {
-        $request->validate([
-            'title' => 'required|max:255',
-            'description' => 'required',
-            'image_upload' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+//        $request->validate([
+//            'title' => 'required|max:255',
+//            'description' => 'required',
+//            'image_upload' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+//        ]);
+        $request->validated();
         DB::Begintransaction();
         try {
             $this->postService->update($request, $id);

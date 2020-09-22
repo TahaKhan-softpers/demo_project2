@@ -80,3 +80,19 @@ Route::prefix('post')->middleware('auth')->group(function () {
 //});
 
 
+
+//these routes are made to check api on web main
+
+Route::get('/api/form/register', function () {
+    return view('form');
+});
+Route::get('/api/form/login', function () {
+    return view('loginform');
+});
+Route::get('/post/display/', function () {
+    return view('index');
+});
+//Route::get('/test', function () {
+//    return view('frontend.modules.test');
+//});
+

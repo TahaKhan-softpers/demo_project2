@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\User as UserResource;
+use App\Notifications\InvoicePaid;
 use App\Services\UserService;
-use App\User;
 use Illuminate\Http\Request;
+
+
 
 
 class UserController extends Controller
@@ -57,7 +58,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $this->userService->create($request->all());
+
+        //register controller is being used due to auth
+        //$user = $this->userService->create($request->all());
     }
 
     /**
@@ -91,6 +94,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $this->userService->update($request->all(), $id);
     }
 
