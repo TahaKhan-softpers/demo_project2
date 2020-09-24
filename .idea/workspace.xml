@@ -32,27 +32,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/blog2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiControllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiControllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiControllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiControllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiControllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiControllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/PostResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/PostResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CommentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CommentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/CommentService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CommentService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/PostStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/PostStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CommentCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CommentCreate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CommentUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CommentUpdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PostCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PostCreate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PostUpdate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PostUpdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/ProcessPodcast.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/ProcessPodcast.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/modules/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/modules/test.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/includes/errormessages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/includes/errormessages.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,6 +185,9 @@
       <path value="$PROJECT_DIR$/vendor/nexmo/laravel" />
       <path value="$PROJECT_DIR$/vendor/nexmo/client-core" />
       <path value="$PROJECT_DIR$/vendor/nexmo/client" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gzbNPteqea5RPIupENUDYyfPkZ" />
@@ -265,7 +262,11 @@
       <workItem from="1600343199046" duration="7005000" />
       <workItem from="1600402796161" duration="9876000" />
       <workItem from="1600660358457" duration="28673000" />
-      <workItem from="1600748551830" duration="2085000" />
+      <workItem from="1600748551830" duration="3885000" />
+      <workItem from="1600757705166" duration="21247000" />
+      <workItem from="1600841113552" duration="14010000" />
+      <workItem from="1600868813066" duration="1544000" />
+      <workItem from="1600922769468" duration="3247000" />
     </task>
     <servers />
   </component>
@@ -357,14 +358,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599805191071" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1600660381436">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1600870335685">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1600660381436" />
-    <state x="324" y="90" width="700" height="530" key="recent.locations.popup" timestamp="1599805720775">
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1600870335685" />
+    <state x="177" y="104" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600770433988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="324" y="90" width="700" height="530" key="recent.locations.popup/0.0.1366.728@0.0.1366.728" timestamp="1599805720775" />
+    <state x="177" y="104" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1600770433988" />
+    <state x="324" y="90" width="700" height="530" key="recent.locations.popup" timestamp="1600866957178">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="324" y="90" width="700" height="530" key="recent.locations.popup/0.0.1366.728@0.0.1366.728" timestamp="1600866957178" />
     <state x="508" y="119" key="refactoring.ChangeSignatureDialog" timestamp="1600676417894">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -373,10 +378,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600350951109" />
-    <state x="281" y="135" width="672" height="678" key="search.everywhere.popup" timestamp="1600660437515">
+    <state x="281" y="135" width="672" height="678" key="search.everywhere.popup" timestamp="1600870346825">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="135" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600660437515" />
+    <state x="281" y="135" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600870346825" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

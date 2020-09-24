@@ -13,6 +13,10 @@ class CommentUpdate extends FormRequest
      */
     public function authorize()
     {
+        //it will check if posted comment is written by author or not
+//        $comment = Comment::find($this->route('comment'));
+//
+//        return $comment && $this->user()->can('create', $comment);
         return false;
     }
 

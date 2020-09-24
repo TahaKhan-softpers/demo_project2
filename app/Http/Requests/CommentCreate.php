@@ -13,10 +13,6 @@ class CommentCreate extends FormRequest
      */
     public function authorize()
     {
-//        $comment = Comment::find($this->route('comment'));
-//
-//        return $comment && $this->user()->can('create', $comment);
-
         //by default it is return false;
         return true;
     }

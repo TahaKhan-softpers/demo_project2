@@ -13,7 +13,7 @@ class PostUpdate extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -28,5 +28,6 @@ class PostUpdate extends FormRequest
             'description' => 'required',
             'image_upload' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
+
     }
 }

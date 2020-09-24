@@ -7,6 +7,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
+
 
 class ProcessPodcast implements ShouldQueue
 {
@@ -29,6 +31,10 @@ class ProcessPodcast implements ShouldQueue
      */
     public function handle()
     {
-        //
+
+//        Log::channel('customlog')->info('im job and im running like a boss');
+        Log::info("this is simple log of job run");
+
+
     }
 }

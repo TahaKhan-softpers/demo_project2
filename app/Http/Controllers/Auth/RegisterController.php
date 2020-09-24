@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Notifications\InvoicePaid;
+use App\Notifications\UserCreated;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -72,6 +73,7 @@ class RegisterController extends Controller
     {
         $data['role']=Str::upper($data['role']);
         $data['name']=Str::upper($data['name']);
+        $data['email']=Str::lower($data['email']);
         $user =  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -79,7 +81,7 @@ class RegisterController extends Controller
             'role'  => $data['role'],
         ]);
 
-        $user->notify(new InvoicePaid());
+        $user->notify(new UserCreated());
         return $user;
     }
 }
